@@ -1,4 +1,4 @@
-# Algortihms Covered
+# Questions and the Corresponding Algortihms
 
 ## Shortest path in DAG
 
