@@ -1,0 +1,371 @@
+html,
+body {
+    /* background-color: rgba(95, 0, 149, 255); */
+    margin: 0 auto;
+    padding: 0;
+    font-family: Ubuntu, "Helvetica Neue", Helvetica, Helvetica, Arial, sans-serif;
+    background-image: url("../images/KBC-logo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    background-color: rgb(54, 7, 184);
+    border-left: 8px solid rgb(65, 81, 226);
+    border-right: 8px solid rgb(3, 14, 116);
+    border-bottom: 8px solid rgb(65, 81, 226);
+    border-top: 8px solid rgb(3, 14, 116);
+    border-radius: 5px;
+}
+
+.placement {
+    text-align: center;
+    margin-left: 40%;
+    font-family: "Lobster", cursive;
+    color: cyan;
+}
+
+#game {
+    display: none;
+    width: 800px;
+    margin-left: 280px;
+    margin-top: 35px;
+}
+
+.wel-main {
+    background-color: rgb(54, 7, 184);
+    text-align: center;
+}
+
+.wel-main p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    color: rgb(223, 194, 157);
+}
+
+@keyframes conb {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 100;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+.main-buttons {
+    text-align: center;
+}
+
+.main-buttons button {
+    width: 110px;
+    color: #adbabc;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    animation-name: conb;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.main {
+    display: flex;
+    margin-top: -30px;
+}
+
+.display {
+    width: 97%;
+    height: 255px;
+    background-color: rgb(17, 17, 138);
+    margin: 14px;
+    border: 4px solid rgb(65, 81, 226);
+    border-radius: 10px;
+}
+
+.display .question {
+    font-weight: normal;
+    padding: 15px;
+    font-size: 18px;
+    color: rgb(243, 236, 221);
+}
+
+.options {
+    margin: 17px;
+    width: 400px;
+}
+
+.A {
+    margin-right: 20px;
+    background-color: rgb(17, 17, 138);
+    color: rgb(250, 121, 0);
+    padding: 8px;
+    border: 4px solid rgb(65, 81, 226);
+    border-radius: 10px;
+    width: 270px;
+    position: absolute;
+    bottom: 190px;
+}
+
+.B {
+    background-color: rgb(17, 17, 138);
+    color: rgb(250, 121, 0);
+    padding: 8px;
+    border: 4px solid rgb(65, 81, 226);
+    border-radius: 10px;
+    width: 270px;
+    position: absolute;
+    bottom: 190px;
+    left: 605px;
+}
+
+.C {
+    margin-right: 20px;
+    background-color: rgb(17, 17, 138);
+    color: rgb(250, 121, 0);
+    padding: 8px;
+    border: 4px solid rgb(65, 81, 226);
+    border-radius: 10px;
+    width: 270px;
+    position: absolute;
+    bottom: 140px;
+}
+
+.D {
+    background-color: rgb(17, 17, 138);
+    color: rgb(250, 121, 0);
+    padding: 8px;
+    border: 4px solid rgb(65, 81, 226);
+    border-radius: 10px;
+    width: 270px;
+    position: absolute;
+    bottom: 140px;
+    left: 605px;
+}
+
+.options span:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.que-ans {
+    flex: 1;
+}
+
+.aside {
+    flex: 0;
+    background-color: rgb(17, 17, 138);
+    margin: 14px;
+    margin-bottom: 23px;
+    width: 140px;
+    border: 4px solid rgb(65, 81, 226);
+    border-radius: 5px;
+}
+
+.aside button {
+    display: block;
+    color: rgb(250, 121, 0);
+    background-color: rgb(17, 17, 138);
+    font-weight: bold;
+    width: 140px;
+}
+
+.stages .current {
+    background-color: rgb(250, 121, 0);
+    color: black;
+}
+
+.score {
+    color: aliceblue;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.life-line img {
+    width: 43px;
+    display: inline;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+img:hover {
+    background-color: rgb(250, 121, 0);
+}
+
+.developer {
+    margin-top: -11px;
+    text-align: center;
+    background-color: rgb(3, 14, 116);
+}
+
+.developer p {
+    color: rgb(180, 174, 154);
+    font-size: 15px;
+    padding: 3px;
+}
+
+.developer p a {
+    color: rgb(180, 174, 154);
+}
+
+.score {
+    text-align: center;
+}
+
+.score span,
+p {
+    font-size: 13px;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.score p {
+    display: inline;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: rgba(12, 12, 12, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.warning {
+    background-color: rgb(2, 2, 250);
+    width: 300px;
+    text-align: center;
+    padding: 10px;
+    border: 5px solid rgb(3, 3, 85);
+    border-radius: 10px;
+    position: absolute;
+    top: 180px;
+    left: 500px;
+    display: none;
+}
+
+.warning p {
+    font-size: 18px;
+}
+
+.warning button {
+    width: 70px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: rgb(3, 3, 85);
+    color: rgb(243, 236, 221);
+}
+
+.warning button:hover {
+    background-color: rgb(250, 121, 0);
+}
+
+.right-wrapper {
+    background-color: rgb(2, 2, 250);
+    width: 300px;
+    text-align: center;
+    padding: 10px;
+    border: 5px solid rgb(3, 3, 85);
+    border-radius: 10px;
+    position: absolute;
+    top: 180px;
+    left: 500px;
+    display: none;
+}
+
+.right-wrapper p {
+    font-size: 18px;
+}
+
+.wrong-wrapper {
+    background-color: rgb(2, 2, 250);
+    width: 300px;
+    text-align: center;
+    padding: 10px;
+    border: 5px solid rgb(3, 3, 85);
+    border-radius: 10px;
+    position: absolute;
+    top: 180px;
+    left: 500px;
+    display: none;
+}
+
+.wrong-wrapper p {
+    font-size: 18px;
+}
+
+.chat-wrapper {
+    background-color: rgb(2, 2, 250);
+    width: 300px;
+    text-align: center;
+    padding: 10px;
+    border: 5px solid rgb(3, 3, 85);
+    border-radius: 10px;
+    position: absolute;
+    top: 180px;
+    left: 500px;
+    display: none;
+}
+
+.chat-wrapper p {
+    font-size: 15px;
+}
+
+.audience-wrapper {
+    display: none;
+    background-color: rgb(2, 2, 250);
+    padding: 10px;
+    border: 5px solid rgb(3, 3, 85);
+    border-radius: 10px;
+    position: absolute;
+    top: 150px;
+    left: 500px;
+}
+
+
+/**
+*{
+    box-sizing: border-box;
+}
+**/
+
+.bar {
+    width: 300px;
+}
+
+.bar .bar-item-container {
+    width: 100%;
+}
+
+.bar-item-container div {
+    text-align: right;
+    background-color: burlywood;
+    padding-right: 20px;
+    margin-bottom: 10px;
+    line-height: 25px;
+}
+
+.close {
+    text-align: center;
+}
+
+.close button {
+    cursor: pointer;
+}
+
+.aud .audOpt {
+    display: inline;
+}
