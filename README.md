@@ -257,22 +257,132 @@
   - neither Greedy nor Divide-and-Conquer nor Dynamic Programming paradigm.
   - Solution: Theoretical
 
-## Chinese remainder Theorem
-
-## Independent Set in Trees
-
-## String hashing
-
-## Binary Exponentiation
-
-## Primality Testing
-
-## FFT and DFT
-
-## Prefix Suffix Hashing
-
-## Rabin Karp
-
 ## Manacher's Algorithm
 
-## Bipartite Matching
+- Easy - The following algorithm finds longest palindromic substring in linear time:
+  - Chinese remainder Theorem
+  - Manacher's Algorithm (Correct)
+  - Ford Fulkerson 
+  - Prim's Algorithm  
+  - Solution: Manacher's Algorithm
+
+## Exponentiation
+
+- Medium - Exponentiation is a heavily used operation in public key cryptography. Which of the following options is the tightest upper bound on the number of multiplications required to compute b^n mod(m)
+  - O(log n) (Correct)
+  - O(n^0.5)
+  - O(n/ log n)
+  - O(n)
+
+## NP Complete
+
+- Medium - Which of the following statements are TRUE? (1) The problem of determining whether there exists a cycle in an undirected graph is in P. (2) The problem of determining whether there exists a cycle in an undirected graph is in NP. (3) If a problem A is NP-Complete, there exists a non-deterministic polynomial time algorithm to solve A.
+  - 1,2,3 (Correct)
+  - 1,3
+  - 2,3
+  - 1,2
+  - Solution: 1 is true because cycle detection can be done in polynomial time using DFS. 2 is true because P is a subset of NP. 3 is true because NP complete is also a subset of NP and NP means Non-deterministic Polynomial time solution exists.
+
+- Hard - Let SHAM3 be the problem of finding a Hamiltonian cycle in a graph G = (V,E) with V divisible by 3 and DHAM3 be the problem of determining if a Hamiltonian cycle exists in such graphs. Which one of the following is true?
+  - Both DHAM3 and SHAM3 are NP-hard (Correct)
+  - DHAM3 is not SHAM3 is NP-hard
+  - DHAM3 is NP-Hard, SHAM3 is not
+  - Both DHAM3 and SHAM3 are not NP-hard
+  - Solution: The problem of finding whether there exist a Hamiltonian Cycle or not is NP Hard and NP Complete Both. Finding a Hamiltonian cycle in a graph G = (V,E) with V divisible by 3 is also NP Hard.
+
+- Medium: Let S be an NP-complete problem and Q and R be two other problems not known to be in NP. Q is polynomial time reducible to S and S is polynomial-time reducible to R. Which one of the following statements is true?
+  - R is NP-Complete
+  - R is NP-Hard (Correct)
+  - Q is NP-Complete
+  - Q is NP-Hard
+  - Solution: (A) Incorrect because R is not in NP. A NP Complete problem has to be in both NP and NP-hard. (B) Correct because a NP Complete problem S is polynomial time educable to R. (C) Incorrect because Q is not in NP. (D) Incorrect because there is no NP-complete problem that is polynomial time Turing-reducible to Q.
+
+## FFT and DFT
+- Hard - The Fourier transform of a conjugate symmetric function is always
+  - imaginary
+  - conjugate anti-symmetric
+  - real (Correct)
+  - conjugate symmetric
+  - Solution: The Fourier transform of a conjugate symmetric function is always real.
+
+## Cryptography
+
+- Hard - Using public key cryptography, X adds a digital signature \sigma to message M, encrypts < M, \sigma >, and sends it to Y, where it is decrypted. Which one of the following sequences of keys is used for the operations?
+  - Encryption: X’s private key followed by Y’s private key; Decryption: X’s public key followed by Y’s public key
+  - Encryption: X’s private key followed by Y’s public key; Decryption: X’s public key followed by Y’s private key
+  - Encryption: X’s public key followed by Y’s private key; Decryption: Y’s public key followed by X’s private key
+  - Encryption: X’s private key followed by Y’s public key; Decryption: Y’s private key followed by X’s public key (Correct)
+
+- Suppose that everyone in a group of N people wants to communicate secretly with the N–1 others using symmetric key cryptographic system. The communication between any two persons should not be decodable by the others in the group. The number of keys required in the system as a whole to satisfy the confidentiality requirement is
+  - 2N
+  - N(N - 1)
+  - N(N-1)/2 (Correct)
+  - (N-1)^2
+  - Solution: In Symmetric Key Cryptography, access of key is with both the parties. It implies every person needs to communicate N-1 other users using different keys i.e 1+2+3...N-2+N-1 This is like number of edges needed in a complete graph with N vertices is N(N-1)/2.
+
+## Hashing
+
+- Hard - Consider a double hashing scheme in which the primary hash function is h1(k) = k mod 23, and the secondary hash function is h2(k) = 1+(k mod 19). Assume that the table size is 23. Then the address returned by probe 1 in the probe sequence (assume that the probe sequence begins at probe 0) for key value k = 90 is ________ .
+  - 13 (Correct)
+  - 15
+  - 21
+  - 23
+  - Solution: h1(k) = k mod 23 = 90 mod 23 = 21, h2(k) = 1+(k mod 19) = 1+(90 mod 19) = 15 
+
+## Chinese remainder Theorem
+
+- Hard - Omkar and Akmar are playing a game on a circular board with n (2≤n≤10^6) cells. The cells are numbered from 1 to n so that for each i (1≤i≤n−1) cell i is adjacent to cell i+1 and cell 1 is adjacent to cell n. Initially, each cell is empty. Omkar and Akmar take turns placing either an A or a B on the board, with Akmar going first. The letter must be placed on an empty cell. In addition, the letter cannot be placed adjacent to a cell containing the same letter. A player loses when it is their turn and there are no more valid moves.
+Output the number of possible distinct games where both players play optimally modulo 109+7. Note that we only consider games where some player has lost and there are no more valid moves. Two games are considered distinct if the number of turns is different or for some turn, the letter or cell number that the letter is placed on were different. A move is considered optimal if the move maximizes the player's chance of winning, assuming the other player plays optimally as well. More formally, if the player who has to move has a winning strategy, they have to make a move after which they will still have a winning strategy. If they do not, they can make any move.
+Output a single integer — the number of possible distinct games where both players play optimally modulo 10^9+7 if n = 42069.
+  - 675837193 (Correct)
+  - 675837194
+  - 675837195
+  - 675837196
+  - Solution: https://codeforces.com/blog/entry/91520 (F problem)
+
+  ## Miscellaneous
+
+- Medium - An inversion in a an array A[] is a pair (A[i], A[j]) such that A[i] > A[j] and i < j. An array will have maximum number of inversions if it is:
+  - sorted in increasing order
+  - sorted in decreasing order (Correct)
+  - sorted in alternating order
+  - sorted in alternating order and in reverse order
+  - Solution: If the array is sorted in decreasing order, each pair will be an inversion. e.g. 5, 4, 3, 2, 1 Maximum number of inversions possible = n * (n - 1) / 2 where n is the size of the array.
+
+- Medium - An element in an array X is called a leader if it is greater than all elements to the right of it in X. The best algorithm to find all leaders in an array:
+  - Solves it in linear time using a left to right pass of the array
+  - Solves it in linear time using a right to left pass of the array (Correct)
+  - Solves it using divide and Conquer
+  - Solves it in O(n^2)
+  - Solution: https://www.geeksforgeeks.org/leaders-in-an-array/
+
+- Medium - In a village, people build houses in the same side of the road. A thief plans to loot the village. He wants maximum amount of money without having any risk of getting caught. By some means, the villagers know that their adjacent house is being looted or not and thus they become alert. So the thief cannot loot contiguous two houses. Given that the thief knows the amount of money stored in each house and the road is straight and there is no turning, which is the most efficient algorithmic strategy to solve this problem?
+  - Brute Force
+  - DP (Correct)
+  - Backtracking
+  - Divide and Conquer
+  - Solution: If we take a closer look, the problem boils down to: Given an array with some finite size where each element represents  a positive number, find the maximum sum such that no two elements are adjacent. Dynamic Programming is the efficient technique to solve this.  The algorithm can be given as follows: Maintain an auxiliary array loot. loot[0] = arr[0], loot[1] = arr[1], loot[i] = max(loot[i - 1], loot[i - 2] + arr[i]),  2 <= i < n, loot[n - 1] gives the maximum amount of money the thief can take away.
+
+## Backtracking
+
+- Hard - Which of the following is not a backtracking algorithm?
+  - Knight tour problem
+  - N queen problem
+  - Tower of hanoi (Correct)
+  - M coloring problem 
+  - Solution: Knight tour problem, N Queen problem and M coloring problem involve backtracking. Tower of hanoi uses simple recursion.
+
+## Divide and Conquer
+
+- Hard - Maximum Subarray Sum problem is to find the subarray with maximum sum. For example, given an array {12, -13, -5, 25, -20, 30, 10}, the maximum subarray sum is 45. The naive solution for this problem is to calculate sum of all subarrays starting with every element and return the maximum of all. We can solve this using Divide and Conquer, what will be the worst case time complexity using Divide and Conquer.
+  - O(n)
+  - O(nlogn) (Correct)
+  - O(log n)
+  - O(n^2)
+
+- Hard - Consider the problem of computing min-max in an unsorted array where min and max are minimum and maximum elements of array. Algorithm A1 can compute min-max in a1 comparisons without divide and conquer. Algorithm A2 can compute min-max in a2 comparisons by scanning the array linearly. What could be the relation between a1 and a2 considering the worst case scenarios?
+  - a1 < a2
+  - a1 > a2 (Correct)
+  - a1 = a2
+  - Depends on input
+  - Solution: When Divide and Conquer is used to find the minimum-maximum element in an array, Recurrence relation for the number of comparisons is T(n) = 2T(n/2) + 2 where 2 is for comparing the minimums as well the maximums of the left and right subarrays On solving, T(n) = 1.5n - 2. While doing linear scan, it would take 2*(n-1) comparisons in the worst case to find both minimum as well maximum in one pass.
