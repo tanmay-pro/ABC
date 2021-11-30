@@ -4,6 +4,7 @@
 
 - Easy: Consider a directed graph whose vertices are numbered from 1 to n. There is an edge from a vertex i to a vertex j
   if and only if either j = i + 1 or j = 3 \* i. The task is to find the minimum number of edges in a path in G from vertex 1 to vertex n. What is the answer if n = 9?
+
   - 2 (correct)
   - 1
   - 3
@@ -15,7 +16,7 @@
   - weight (u, v) <= 12
   - weight (u, v) > 12
   - weight (u, v) >= 12 (Correct)
-  - Solution:  The minimum weight happens when (S,U) + (U,V) = (S,V) Else (S,U) + (U,V) >= (S,V) Given (S,U) = 53, (S,V) = 65 53 + (U,V) >= 63 (U,V) >= 12.
+  - Solution: The minimum weight happens when (S,U) + (U,V) = (S,V) Else (S,U) + (U,V) >= (S,V) Given (S,U) = 53, (S,V) = 65 53 + (U,V) >= 63 (U,V) >= 12.
 
 ## Edit Distance
 
@@ -29,6 +30,7 @@
 ## Knapsack and DP in general
 
 - Hard - Let's call the roundness of a number the number of zeros with which it ends. An array of n numbers is given. Choose a subset of exactly k numbers so that the roundness of the product of the selected numbers is maximized. Output the resulting roundness value. Consider n to be 5 and k to be 4. What is the answer if the array of numbers are: 539134530963895499 265657472022483040 798956216114326361 930406714691011229 562844921643925634
+
   - 1 (correct)
   - 2
   - 3
@@ -36,6 +38,7 @@
   - Solution: https://codeforces.com/blog/entry/53662 (837- D)
 
 - Easy - We use Dynamic programming when?
+
   - We need an optimal solution.
   - Its faster than greedy.
   - The problem can be reduced to 3-SAT problem.
@@ -65,8 +68,8 @@
   - O(n^2 log(n)) (correct)
   - O(n^2 + log(n))
   - O(n^2)
-  - Solution: Question 6 Explanation: 
-The recurrence tree for merge sort will have height Log(n). And O(n^2) work will be done at each level of the recurrence tree (Each level involves n comparisons and a comparison takes O(n) time in worst case). So time complexity of this Merge Sort will be O(n^2 logn)
+  - Solution: Question 6 Explanation:
+    The recurrence tree for merge sort will have height Log(n). And O(n^2) work will be done at each level of the recurrence tree (Each level involves n comparisons and a comparison takes O(n) time in worst case). So time complexity of this Merge Sort will be O(n^2 logn)
 
 ## Matroid Theory
 
@@ -79,6 +82,7 @@ The recurrence tree for merge sort will have height Log(n). And O(n^2) work will
 ## DFS, BFS (Graph Traversals)
 
 - Hard - Let G=(V,E) be an undirected graph with a subgraph G1=(V1,E1). Weights are assigned to edges of G as follows. w(e)= 0 if e belongs to E1 and 1 otherwise. A single-source shortest path algorithm is executed on the weighted graph (V,E,w) with an arbitrary vertex v1 of V1 as the source. Which of the following can always be inferred from the path costs computed?
+
   - The number of edges in the shortest paths from v1 to all vertices of G
   - G1 is connected (Correct)
   - V1 forms a clique in G
@@ -86,11 +90,12 @@ The recurrence tree for merge sort will have height Log(n). And O(n^2) work will
   - Solution: When shortest path shortest path from v1 (one of the vertices in V1) is computed. G1 is connected if the distance from v1 to any other vertex in V1 is greater than 0, otherwise G1 is disconnected.
 
 - Hard - In an adjacency list representation of an undirected simple graph G = (V, E), each edge (u, v) has two adjacency list entries: [v] in the adjacency list of u, and [u] in the adjacency list of v. These are called twins of each other. A twin pointer is a pointer from an adjacency list entry to its twin. If |E| = m and |V | = n, and the memory size is not a constraint, what is the time complexity of the most efficient algorithm to set the twin pointer in each entry in each adjacency list?
+
   - O(n^2)
   - O(m + n) (Correct)
   - O(m^2)
-  - O(n*4)
-  - Solution: First you need to find twins of each node. You can do this using level order traversal (i.e., BFS) once. Time complexity of BFS is Θ(m +n). And you have to use linked list for representation which is extra space (but memory size is not a constraint here). Final, time complexity is Θ(m + n) to set twin pointer. 
+  - O(n\*4)
+  - Solution: First you need to find twins of each node. You can do this using level order traversal (i.e., BFS) once. Time complexity of BFS is Θ(m +n). And you have to use linked list for representation which is extra space (but memory size is not a constraint here). Final, time complexity is Θ(m + n) to set twin pointer.
 
 - Easy - Let G be a graph with n vertices and m edges. What is the tightest upper bound on the running time on Depth First Search of G? Assume that the graph is represented using adjacency matrix.
   - O(n)
@@ -99,11 +104,10 @@ The recurrence tree for merge sort will have height Log(n). And O(n^2) work will
   - O(mn)
   - Solution: Depth First Search of a graph takes O(m+n) time when the graph is represented using adjacency list. In adjacency matrix representation, graph is represented as an "n x n" matrix. To do DFS, for every vertex, we traverse the row corresponding to that vertex to find all adjacent vertices (In adjacency list representation we traverse only the adjacent vertices of the vertex). Therefore time complexity becomes O(n2)
 
-## Longest Common Subsequence
-
 ## Chain Matrix Multiplication, Strassen's Algorithm
 
 - Medium - Four matrices M1, M2, M3 and M4 of dimensions pxq, qxr, rxs and sxt respectively can be multiplied is several ways with different number of total scalar multiplications. For example, when multiplied as ((M1 X M2) X (M3 X M4)), the total number of multiplications is pqr + rst + prt. When multiplied as (((M1 X M2) X M3) X M4), the total number of scalar multiplications is pqr + prs + pst. If p = 10, q = 100, r = 20, s = 5 and t = 80, then the number of scalar multiplications needed is:
+
   - 248000
   - 44000
   - 19000 (Correct)
@@ -117,11 +121,10 @@ The recurrence tree for merge sort will have height Log(n). And O(n^2) work will
   - O(N^log(5))
   - Solution: Theoretical knowledge
 
-## Independent Set in Trees
-
 ## Huffman Coding
 
 - Medium - A networking company uses a compression technique to encode the message before transmitting over the network. Suppose the message contains the following characters with their frequency: {a-5, b-9, c-12, d-13, e-16, f-45}. Each character in input message takes 1 byte. If the compression technique used is Huffman Coding, how many bits will be saved in the message?
+
   - 224
   - 800
   - 576 (Correct)
@@ -129,6 +132,7 @@ The recurrence tree for merge sort will have height Log(n). And O(n^2) work will
   - Solution: Total number of characters in the message = 100. Each character takes 1 byte. So total number of bits needed = 800. After Huffman Coding, the characters can be represented with: f: 0, c: 100, d: 101, a: 1100, b: 1101, e: 111Total number of bits needed = 224. Hence, number of bits saved = 800 - 224 = 576
 
 - Easy - Which of the following is true about Huffman Coding?
+
   - Huffman coding may become lossy in some cases
   - Huffman Codes may not be optimal lossless codes in some cases
   - In Huffman coding, no code is prefix of any other code. (Correct)
@@ -140,13 +144,12 @@ The recurrence tree for merge sort will have height Log(n). And O(n^2) work will
   - 2.18
   - 2.25
   - 1.93 (Correct)
-  - Solution:  The idea is to keep the least probable characters as low as possible by picking them first. The average length = (1 * 1/2 + 2 * 1/4 + 3 * 1/8 + 4 * 1/16 + 5 * 1/32 + 5 * 1/32) = 1.9375
-
-## FFT and DFT
+  - Solution: The idea is to keep the least probable characters as low as possible by picking them first. The average length = (1 _ 1/2 + 2 _ 1/4 + 3 _ 1/8 + 4 _ 1/16 + 5 _ 1/32 + 5 _ 1/32) = 1.9375
 
 ## Kruskal's Algorithm, Prim's Algorithms
 
 - Medium - Let G be a weighted graph with edge weights greater than one and G'be the graph constructed by squaring the weights of edges in G. Let T and T' be the minimum spanning trees of G and G', respectively, with total weights t and t'. Which of the following statements is TRUE?
+
   - T' = T with total weight t' = t^2
   - T' = T with total weight t' < t^2
   - T' != T but total weight t' = t^2
@@ -169,33 +172,10 @@ The recurrence tree for merge sort will have height Log(n). And O(n^2) work will
   - O(n)
   - Solution: If f(n) = O(n^(log a to the base b)− ) for some constant  > 0, then T (n) = Θ(n^(log a to base b)).
 
-## Ford Fulkerson
-
-## Strongly Connected Components
-
-## Bellman Ford's Algorithm
-
-## Flloyd Warshall's Algorithm
-
-## Chinese remainder Theorem
-
-## String hashing
-
-## Binary Exponentiation
-
-## Primality Testing
-
-## Prefix Suffix Hashing
-
-## Rabin Karp
-
-## Manacher's Algorithm
-
-## Bipartite Matching
-
 ## Binary Search
 
 - Easy - The Worst case time complexity of binary search is?
+
   - O(log N) (correct)
   - O(N)
   - O(1)
@@ -206,3 +186,93 @@ The recurrence tree for merge sort will have height Log(n). And O(n^2) work will
   - 1111111111
   - 1111111100
   - 1111111101
+
+## Longest Common Subsequence
+
+- Hard - A sub-sequence of a given sequence is just the given sequence with some elements (possibly none or all) left out. We are given two sequences X[m] and Y[n] of lengths m and n respectively, with indexes of X and Y starting from 0. We wish to find the length of the longest common sub-sequence(LCS) of X[m] and Y[n] as l(m,n), where an incomplete recursive definition for the function l(i,j) to compute the length of The LCS of X[m] and Y[n] is given: l(i,j) = 0, if either i=0 or j=0 = expr1, if i,j > 0 and X[i-1] = Y[j-1] = expr2, if i,j > 0 and X[i-1] != Y[j-1]
+  - expr1 ≡ l(i-1, j) + 1
+  - expr1 ≡ l(i, j-1)
+  - expr2 ≡ max(l(i-1, j), l(i, j-1)) (Correct)
+  - expr2 ≡ max(l(i-1,j-1),l(i,j))
+  - Solution: Longest Common Subsequence Problem
+
+## Subset Sum
+
+- Hard - The subset-sum problem is defined as follows. Given a set of n positive integers, S = {a1 ,a2 ,a3 ,…,an} and positive integer W, is there a subset of S whose elements sum to W? A dynamic program for solving this problem uses a 2-dimensional Boolean array X, with n rows and W+1 columns. X[i, j],1 <= i <= n, 0 <= j <= W, is TRUE if and only if there is a subset of {a1 ,a2 ,...,ai} whose elements sum to j. Which of the following is valid for 2 <= i <= n and ai <= j <= W?
+  - X[i, j] = X[i - 1, j] ∨ X[i, j -ai]
+  - X[i, j] = X[i - 1, j] ∨ X[i - 1, j - ai] (Correct)
+  - X[i, j] = X[i - 1, j] ∧ X[i, j - ai]
+  - X[i, j] = X[i - 1, j] ∧ X[i -1, j - ai]
+  - Solution: X[I, j] (2 <= i <= n and ai <= j <= W), is true if any of the following is true 1) Sum of weights excluding ai is equal to j, i.e., if X[i-1, j] is true. 2) Sum of weights including ai is equal to j, i.e., if X[i-1, j-ai] is true so that we get (j – ai) + ai as j
+
+## Ford Fulkerson
+
+- Medium - A simple acyclic path between source and sink which passes through only positive weighted edges is called?
+  - Augmenting Path (Correct)
+  - Maximum Path
+  - Critical Path
+  - Residual Path
+  - Solution: Augmenting Path between source and sink is a simple path without cycles. Critical path is a path consisting of zero slack edges.
+
+## Strongly Connected Components
+
+- Hard - Let G=(V,E) be a directed graph where V is the set of vertices and E the set of edges. Then which one of the following graphs has the same strongly connected components as G ?
+
+  - G1 = {V, E1} where E1 = {(u, v) | (u, v) does not belong to E}
+  - G2 = {V, E2} where E2 = {(u, v) | (u, v) belongs to E} (Correct)
+  - G3 = {V, E3} where E3 = {(u, v) | there is a path of length less than equal to 2 from u to v in E}
+  - G4 = {V4, E} where V4 is the set of vertices in G which are not isolated
+  - Solution: If we reverse directions of all arcs in a graph, the new graph has same set of strongly connected components as the original graph.
+
+- Hard - Which of the following is the correct decomposition of the directed graph given below into its strongly connected components? (Graph Link: https://www.geeksforgeeks.org/wp-content/uploads/gq/2016/05/2006_46.png)
+  - {P, Q, R, S}, {T}, {U},{V}
+  - {P,Q, R, S, T, V}, {U} (Correct)
+  - {P, Q, S, T, V}, {R}, {U}
+  - {P, Q, R, S, T, U, V}
+  - Solution: Trivial
+
+## Bellman Ford's Algorithm
+
+- Medium - Which of the following statement(s)is / are correct regarding Bellman-Ford shortest path algorithm? P: Always finds a negative weighted cycle, if one exist s. Q: Finds whether any negative weighted cycle is reachable from the source.
+
+  - P Only
+  - Q Only (Correct)
+  - Both P and Q
+  - Neither P nor Q
+  - Solution: Bellman-Ford shortest path algorithm is a single source shortest path algorithm. So it can only find cycles which are reachable from a given source, not any negative weight cycle. Consider a disconnected where a negative weight cycle is not reachable from the source at all.
+
+- Easy - What is the time complexity of Bellman-Ford single-source shortest path algorithm on a complete graph of n vertices?
+  - O(n^2)
+  - O(n^2 log n)
+  - O(n^3) (Correct)
+  - O(n^3 log n)
+  - Solution: Time complexity of Bellman-Ford algorithm is O(VE) where V is number of vertices and E is number of edges. For a complete graph with n vertices, V = n, E = O(n^2). So overall time complexity becomes O(n^3)
+
+## Flloyd Warshall's Algorithm
+
+- Easy - The Floyd-Warshall algorithm for all-pair shortest paths computation is based on:
+  - Greedy paradigm.
+  - Divide-and-Conquer paradigm.
+  - Dynamic Programming paradigm. (Correct)
+  - neither Greedy nor Divide-and-Conquer nor Dynamic Programming paradigm.
+  - Solution: Theoretical
+
+## Chinese remainder Theorem
+
+## Independent Set in Trees
+
+## String hashing
+
+## Binary Exponentiation
+
+## Primality Testing
+
+## FFT and DFT
+
+## Prefix Suffix Hashing
+
+## Rabin Karp
+
+## Manacher's Algorithm
+
+## Bipartite Matching
