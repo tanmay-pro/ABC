@@ -345,4 +345,4 @@ $(".aud").click(function() {
 // $(".start-btn").click(function() {
 //     millionaire.start()
 // })
-setTimeout(() => { millionaire.start() }, 1000);
+setTimeout(() => { millionaire.start() }, 5000);
