@@ -15,16 +15,11 @@ let stageLen = 1,
  * The millionaire game object
  */
 let millionaire = {
-    /**
-     * Returns a random number from 1 to 6, which is used 
-     * for selection of game data. This function also makes 
-     * sure a number is not selected twice.
-     */
     random: function() {
-        var rand = Math.floor(Math.random() * 7)
+        var rand = Math.floor(Math.random() * 15)
         try {
             while (taken.toString().match(rand)) {
-                rand = Math.floor(Math.random() * 7);
+                rand = Math.floor(Math.random() * 15);
             }
             taken.push(rand);
             return rand;
@@ -115,14 +110,14 @@ let millionaire = {
                     $('#right').html("")
                     $(".modal").fadeOut()
                 })
-            }, 4500)
+            }, 5000)
 
             pLen--;
             $(".current").removeClass("current");
             $(".stages button").eq(pLen - 1).addClass("current");
             $(".score").html("Score: " + amount)
             gameLength++;
-
+            $(".opt").css("display", "none");
             setTimeout(() => {
                 this.selectQuestion()
             }, 4500)
@@ -167,8 +162,7 @@ let millionaire = {
     fifty: function() {
         var options = ["D", "A", "C", "B"]
         var removedOptions = []
-        $(".fifty").attr({ "src": "../images/fifty2.png" }).css("cursor", "default")
-        $(".fifty:hover").css("background-color", "rgb(17, 17, 138)")
+        $(".fifty").css("display", "none");
         fifty_fifty = false
 
         for (var i = 0; i < options.length; i++) {
@@ -193,9 +187,9 @@ let millionaire = {
         let friend = ["Ngozi", "Ekene", "Chioma", "Kenneth", "Bright", "Chisom", "Adaeze"]
         let sure = ["100%", "80%", "60%", "50%", "30%"]
         let resp = ["Am sure it\'s", "It\'s certainly", "It\'s definitely", "I think it\'s", "Am not sure to choose"]
-
-        $(".call").attr({ "src": "../images/call2.png" }).css("cursor", "default")
-        $(".call:hover").css("background-color", "rgb(17, 17, 138)")
+        $(".call").css("display", "none");
+        // $(".call").attr({ "src": "../images/call2.png" }).css("cursor", "default")
+        // $(".call:hover").css("background-color", "rgb(17, 17, 138)")
         $(".modal").fadeIn()
         $('.chat-wrapper').fadeIn(500);
 
@@ -209,13 +203,13 @@ let millionaire = {
 
         setTimeout(
             function() {
-                $('#chat').html(`ME: Hello ${friend[randFriend]}. 😞 Am in a hot seat now and I need the answer to this question.<br>${$('.question').html()}`)
+                $('#chat').html(`ME: Hello ${friend[randFriend]}. I am in a hot seat right now and I need the answer to this question.<br>${$('.question').html()}`)
             }, 4800)
 
         setTimeout(
             function() {
                 $('#chat').html(`${friend[randFriend]}: Thinking.....`)
-            }, 8000)
+            }, 10000)
 
         setTimeout(
             function() {
@@ -247,8 +241,9 @@ let millionaire = {
      * Activate audience lifeline
      */
     audience: function() {
-        $(".aud").attr({ "src": "../images/aud2.png" }).css("cursor", "default")
-        $(".aud:hover").css("background-color", "rgb(17, 17, 138)")
+        // $(".aud").attr({ "src": "../images/aud2.png" }).css("cursor", "default")
+        // $(".aud:hover").css("background-color", "rgb(17, 17, 138)")
+        $(".aud").css("display", "none");
         $(".modal").fadeIn()
         $(".chat-wrapper").fadeIn(500)
 
@@ -350,4 +345,4 @@ $(".aud").click(function() {
 // $(".start-btn").click(function() {
 //     millionaire.start()
 // })
-setTimeout(() => { millionaire.start() }, 5000);
+setTimeout(() => { millionaire.start() }, 1000);

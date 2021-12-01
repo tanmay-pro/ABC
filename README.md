@@ -21,8 +21,8 @@
 ## Edit Distance
 
 - Easy: The edit distance between two strings is the minimum number of operations required to transform one string into the other. The allowed operations are adding, removing or replacing a character from the string. Find edit distance between the two strings: TWXFUABGBNLTBFNSUVQW, GPNJILFXJUIZPLTVUIB.
-  - 19 (correct)
   - 18
+  - 19
   - 1
   - 20
   - Solution: Use Edit Distance Algorithm
