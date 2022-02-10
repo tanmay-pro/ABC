@@ -16,10 +16,10 @@ let stageLen = 1,
  */
 let millionaire = {
     random: function() {
-        var rand = Math.floor(Math.random() * 15)
+        var rand = Math.floor(Math.random() * 6)
         try {
             while (taken.toString().match(rand)) {
-                rand = Math.floor(Math.random() * 15);
+                rand = Math.floor(Math.random() * 6);
             }
             taken.push(rand);
             return rand;

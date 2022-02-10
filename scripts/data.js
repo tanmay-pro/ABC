@@ -1,26 +1,6 @@
 var stages = {
     stage1: {
         data: [{
-                "question": "Consider a directed graph whose vertices are numbered from 1 to n. There is an edge from a vertex i to a vertex j if and only if either j = i + 1 or j = 3 \* i. The task is to find the minimum number of edges in a path in G from vertex 1 to vertex n. What is the answer if n = 9 ?",
-                "options": [
-                    "A: 2",
-                    "B: 1",
-                    "C: 3",
-                    "D: 4",
-                ],
-                "ans": "A"
-            },
-            {
-                "question": "The edit distance between two strings is the minimum number of operations required to transform one string into the other. The allowed operations are adding, removing or replacing a character from the string. Find edit distance between the two strings:   TWXFUABGBNLTBFNSUVQW,   GPNJILFXJUIZPLTVUIB.",
-                "options": [
-                    "A: 18",
-                    "B: 19",
-                    "C: 1",
-                    "D: 20",
-                ],
-                "ans": "B"
-            },
-            {
                 "question": "We use Dynamic programming when?",
                 "options": [
                     "A: We need an optimal solution.",
@@ -49,16 +29,6 @@ var stages = {
                     "D: It is greater than and less than at least 60% of all elements in the whole list.",
                 ],
                 "ans": "A"
-            },
-            {
-                "question": "A list of n string, each of length n, is sorted into lexicographic order using the merge-sort algorithm. The worst case running time of this computation is:",
-                "options": [
-                    "A: O(n log(n))",
-                    "B: O(n^2 log(n))",
-                    "C: O(n^2 + log(n))",
-                    "D: O(n^2)",
-                ],
-                "ans": "B"
             },
             {
                 "question": "Expressing a problem in matroid theory is a sufficient condition to determine that it can be solved by the following type of algorithms (Consider that no algotihm overlaps between these sets):",
@@ -91,6 +61,16 @@ var stages = {
                 "ans": "C"
             },
             {
+                "question": "A list of n string, each of length n, is sorted into lexicographic order using the merge-sort algorithm. The worst case running time of this computation is:",
+                "options": [
+                    "A: O(n log(n))",
+                    "B: O(n^2 log(n))",
+                    "C: O(n^2 + log(n))",
+                    "D: O(n^2)",
+                ],
+                "ans": "B"
+            },
+            {
                 "question": "Let G be an undirected connected graph with distinct edge weight. Let emax be the edge with maximum weight and emin the edge with minimum weight. Which of the following statements is false?",
                 "options": [
                     "A: Every minimum spanning tree of G must contain emin",
@@ -119,6 +99,26 @@ var stages = {
                     "D: O(N log N)",
                 ],
                 "ans": "A"
+            },
+            {
+                "question": "Consider a directed graph whose vertices are numbered from 1 to n. There is an edge from a vertex i to a vertex j if and only if either j = i + 1 or j = 3 \* i. The task is to find the minimum number of edges in a path in G from vertex 1 to vertex n. What is the answer if n = 9 ?",
+                "options": [
+                    "A: 2",
+                    "B: 1",
+                    "C: 3",
+                    "D: 4",
+                ],
+                "ans": "A"
+            },
+            {
+                "question": "The edit distance between two strings is the minimum number of operations required to transform one string into the other. The allowed operations are adding, removing or replacing a character from the string. Find edit distance between the two strings:   TWXFUABGBNLTBFNSUVQW,   GPNJILFXJUIZPLTVUIB.",
+                "options": [
+                    "A: 18",
+                    "B: 19",
+                    "C: 1",
+                    "D: 20",
+                ],
+                "ans": "B"
             },
             {
                 "question": "What is the time complexity of Bellman-Ford single-source shortest path algorithm on a complete graph of n vertices?",
